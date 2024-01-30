@@ -27,3 +27,24 @@ Notes:
 
 
 // Solution
+
+function mostMoney(students) {
+  let maxMoney = 0;
+  let names = [];
+  for (let i = 0; i < students.length; i++) {
+    let total = students[i].fives*5 + students[i].tens*10 + students[i].twenties*20;
+    if (total == maxMoney) {
+      names.push(students[i].name);
+    } else if (total > maxMoney) {
+      maxMoney = total;
+      names = [students[i].name];
+    }
+  }
+  
+  if (names.length == students.length && students.length != 1) {
+    return "all";
+  } else {
+    let output = "";
+    return names.join(", ");
+  }
+}
