@@ -24,3 +24,6 @@ Notes:
   either one person has the most, 
   or everyone has the same amount.
 */
+
+
+// Solution
